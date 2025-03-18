@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void main()
+{
+    // Let's assume the maximum array size as 10.
+    // Initialize sum as 0. Otherwise, it will take some garbage value.
+    int arr[10] = {10, 20, 30, 1, 2, 3, 4, 5, 6}, size, i, sum = 0;
+    
+    // Get the size of the array (which is 9 in this case, considering the predefined values)
+    size = sizeof(arr) / sizeof(arr[0]);
+    
+    // Get the actual number of elements to be input
+    printf("Enter the number of elements in the array (max 10): ");
+    scanf("%d", &size);
+
+    // Input array elements from the user
+    printf("Enter array elements\n");
+    for(i = 0; i < size; i++)
+          scanf("%d", &arr[i]);
+    
+    // Calculate the sum of the first and last elements of the array
+    sum = arr[0] + arr[size - 1]; 
+    
+    // Print the result
+    printf("Sum of the first and last elements = %d\n", sum);
+}
