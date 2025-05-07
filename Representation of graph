@@ -1,0 +1,26 @@
+int MAX=5;
+int main()
+{
+    // Initialize adjacency matrix to 0
+    int graph[MAX][MAX] = { 0 };
+
+    // Add edges
+    insertEdge(graph, 0, 1);
+    insertEdge(graph, 0, 2);
+    insertEdge(graph, 1, 2);
+    insertEdge(graph, 2, 0);
+    insertEdge(graph, 2, 3);
+    printgraph(graph);
+}
+
+void insertEdge(int graph[MAX][MAX], int u, int v)
+{
+    // Set the edge from u to v
+    graph[u][v] = 1;
+    // Set the edge from v to u (undirected graph)
+    graph[v][u] = 1;
+}
+
+void printgraph(int graph[MAX][MAX])
+{
+   }
