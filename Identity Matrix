@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+ int row, col;
+ printf("Enter number of rows and columns: ");
+ scanf("%d %d", &row, &col);
+ if (row != col) {
+ printf("Identity matrix is possible only for square matrices.\n");
+ return 0;
+ }
+ int matrix[row][col];
+
+ // Creating identity matrix
+ for (int i = 0; i < row; i++) {
+ for (int j = 0; j < col; j++) {
+ if (i == j)
+ matrix[i][j] = 1;
+ else
+ matrix[i][j] = 0;
+ }
+ }
+ printf("Unit (Identity) matrix:\n");
+ for (int i = 0; i < row; i++) {
+ for (int j = 0; j < col; j++) {
+ printf("%d ", matrix[i][j]);
+ }
+ printf("\n");
+ }
+ return 0
